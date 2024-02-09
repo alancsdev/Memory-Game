@@ -24,3 +24,13 @@ To win you must find all pairs of animals, the cards with the animals will be sh
 
 You have 3 minutes to find all the pairs, to do this you just need to choose 2 cards, if the animals are the same, you get 1 point, if they are different, the chosen cards will be turned face down and you must try again.
 If you make a mistake 7 times or the time runs out, you lose.
+
+# Technologies used:
+<div style="display: inline_block"><br>
+  <img align="center" alt="Alan-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" alt="Alan-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="Alan-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+</div>
+
+# Screenshot:
+![myGame](https://i.ibb.co/LSGGSHW/image.png)
