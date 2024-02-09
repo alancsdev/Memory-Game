@@ -118,11 +118,14 @@ const resultEl = document.querySelector('.result');
 const resetEl = document.querySelector('button');
 
 startGame = () => {
+  //Shuffle the cards
   const shuffledCards = cards.sort(() => Math.random() - 0.5);
 
+  //Iterate the element to create the cards
   fronts.forEach((front, index) => {
     const img = document.createElement('img');
     img.src = shuffledCards[index].img;
+    //Creating custom attributes to compare when flip
     cardEl[index].setAttribute('data-card', shuffledCards[index].name);
     cardEl[index].setAttribute('data-id', index);
     cardEl[index].setAttribute('data-audio', shuffledCards[index].audio);
@@ -136,7 +139,6 @@ startGame = () => {
 startGame();
 
 flip = (data) => {
-  //console.log(data);
   if (play) {
     const cardInner = data.querySelector('.card-inner');
     if (!cardInner.classList.contains('flip')) {
@@ -160,6 +162,7 @@ flip = (data) => {
   }
 };
 
+// Function to check if the cards match
 checkCards = () => {
   play = false;
   if (choices[0] === choices[1]) {
@@ -242,11 +245,13 @@ function pauseTimer() {
   clearInterval(intervalId);
 }
 
+//Function to reset the game
 resetEl.addEventListener('click', () => {
   choices = [];
   idChoice = [];
   const elements = document.querySelectorAll('.card-inner');
   const imgTag = document.querySelectorAll('.card-front img');
+  //Removing classes and the element to recreate in new positions again
   elements.forEach((el) =>
     el.classList.contains('flip') ? el.classList.remove('flip') : null
   );
@@ -264,6 +269,7 @@ resetEl.addEventListener('click', () => {
   }, 1000);
 });
 
+// Play audio
 function playAudio(audio) {
   console.log(audio);
   const audioUrl = audio;
