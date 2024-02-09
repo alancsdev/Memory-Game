@@ -200,7 +200,7 @@ checkCards = () => {
 gameOver = () => {
   play = false;
   resultEl.textContent = 'You lost!!';
-  secondsLeft = 0;
+  pauseTimer();
 };
 
 let intervalId;
