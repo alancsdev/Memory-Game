@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -6,26 +8,169 @@
 
 body {
   height: 100vh;
+  background: rgba(195, 216, 249, 0.75);
   display: flex;
-  background: #c3c6e3;
+  flex-direction: column;
   justify-content: center;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  height: 10%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#timer {
+  display: flex;
+  font-family: 'Bebas Neue', sans-serif;
+  height: 5%;
+  font-size: 2rem;
   align-items: center;
 }
 
-#board-game {
-  width: 600px;
-  height: 480px;
+.score {
+  display: flex;
+  font-size: 2rem;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 50%;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.container {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.board-game {
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   border: 2px solid black;
+  border-radius: 10%;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  align-content: center;
+  gap: 10px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: white;
 }
 
-#board-game img {
-  width: 19%;
-  height: 19%;
-  border: 1px solid black;
+.card {
+  width: 18%;
+  height: 18%;
+  perspective: 1000px;
+  /* margin-top: -5rem;
+  margin-bottom: -100px; */
+}
+
+@media only screen and (max-width: 600px) {
+  .board-game {
+    gap: 8px;
+    padding-bottom: 20px;
+    border-radius: 0;
+  }
+
+  .card {
+    width: 26%;
+    height: 13%;
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .board-game {
+    gap: 15px;
+
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .card {
+    width: 22%;
+    height: 15%;
+  }
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s; /* Adiciona uma transição suave ao transform */
+  transform-style: preserve-3d; /* Garante que os elementos filhos respeitem a perspectiva */
+}
+
+.card .card-inner.flip {
+  transform: rotateY(180deg);
+}
+
+.card-back,
+.card-front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* Oculta a parte de trás da carta */
+}
+
+.card-front {
+  transform: rotateY(
+    180deg
+  ); /* Inicia a parte de trás da carta virada para trás */
+}
+
+.result {
+  font-family: 'Bebas Neue', sans-serif;
+  margin-top: 10px;
+  font-size: 3rem;
+  text-align: center;
+}
+
+button {
+  width: 150px;
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #ffffff;
+  font-size: 1.8rem;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
 }
