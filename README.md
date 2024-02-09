@@ -1,6 +1,7 @@
 #! Hello! 👋 This is my Memory Game!!!!! 
 
-# If you wanna play just click [here]([https://www.google.com](https://alancsdev.github.io/Memory-Game/)) - 
+# If you wanna play just click [here](https://www.google.com](https://alancsdev.github.io/Memory-Game/) - 
+[Google](https://www.google.com)
 
 # Memory Game
  
