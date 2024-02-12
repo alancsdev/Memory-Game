@@ -23,7 +23,7 @@ The most famous publisher is Ravensburger - they have the rights for the brand n
 To win you must find all pairs of animals, the cards with the animals will be shuffled at the beginning of the game.
 
 You have 3 minutes to find all the pairs, to do this you just need to choose 2 cards, if the animals are the same, you get 1 point, if they are different, the chosen cards will be turned face down and you must try again.
-If you make a mistake 9 times or the time runs out, you lose.
+If you make a mistake 10 times or the time runs out, you lose.
 
 # Technologies used:
 
