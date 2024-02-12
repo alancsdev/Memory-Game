@@ -166,7 +166,6 @@ flip = (data) => {
 checkCards = () => {
   play = false;
   if (choices[0] === choices[1]) {
-    //console.log('match');
     console.log(audioChoice);
     playAudio(audioChoice);
     correctChoices += 1;
@@ -177,7 +176,6 @@ checkCards = () => {
       play = false;
     }
   } else {
-    //console.log('no match');
     wrongChoices += 1;
     setTimeout(() => {
       play = true;
