@@ -271,7 +271,6 @@ resetEl.addEventListener('click', () => {
 
 // Play audio
 function playAudio(audio) {
-  console.log(audio);
   const audioUrl = audio;
   if (audioUrl) {
     const audio = new Audio(audioUrl);
