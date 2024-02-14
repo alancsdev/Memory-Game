@@ -152,12 +152,9 @@ flip = (data) => {
           cardInner.classList.add('flip');
           choices[1] = data.getAttribute('data-card');
           idChoice[1] = +data.getAttribute('data-id');
-          checkCards(data);
-        } else {
-          console.log('click same card');
+          checkCards();
         }
       }
-      console.log(data.getAttribute('data-card'));
     }
   }
 };
@@ -166,7 +163,6 @@ flip = (data) => {
 checkCards = () => {
   play = false;
   if (choices[0] === choices[1]) {
-    console.log(audioChoice);
     playAudio(audioChoice);
     correctChoices += 1;
     play = true;
