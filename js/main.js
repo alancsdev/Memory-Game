@@ -182,7 +182,7 @@ checkCards = () => {
         const cardInner =
           elementsWithDataCardValue.querySelector('.card-inner');
         cardInner.classList.remove('flip');
-        if (play === true && wrongChoices > 2) {
+        if (play === true && wrongChoices > 5) {
           gameOver();
         }
       });
