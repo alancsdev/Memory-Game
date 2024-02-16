@@ -165,7 +165,7 @@ checkCards = () => {
     playAudio(audioChoice);
     correctChoices += 1;
     play = true;
-    if (correctChoices === 1) {
+    if (correctChoices === 10) {
       resultEl.textContent = 'You won!!';
       pauseTimer();
       play = false;
@@ -181,7 +181,7 @@ checkCards = () => {
         const cardInner =
           elementsWithDataCardValue.querySelector('.card-inner');
         cardInner.classList.remove('flip');
-        if (play === true && wrongChoices > 5) {
+        if (play === true && wrongChoices > 9) {
           gameOver();
         }
       });
