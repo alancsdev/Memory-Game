@@ -109,8 +109,7 @@ let correctChoices = 0;
 let play = true;
 //Reverse time 180 seconds
 const seconds = 180;
-const fronts = document.querySelectorAll('.card-front');
-const backs = document.querySelectorAll('.card-back img');
+const frontsEl = document.querySelectorAll('.card-front');
 const cardEl = document.querySelectorAll('.card');
 const scoreEl = document.querySelector('.score span');
 const failsEl = document.querySelector('.fails');
@@ -122,7 +121,7 @@ startGame = () => {
   const shuffledCards = cards.sort(() => Math.random() - 0.5);
 
   //Iterate the element to create the cards
-  fronts.forEach((front, index) => {
+  frontsEl.forEach((front, index) => {
     const img = document.createElement('img');
     img.src = shuffledCards[index].img;
     //Creating custom attributes to compare when flip
